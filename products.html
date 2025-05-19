@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Steve and Robert Generators Services Ltd.</title>
+     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Steve and Robert Generators Services Ltd.">
+            </div>
+            <nav>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Our Products</h1>
+                <p>Quality generator parts and accessories for all major brands.</p>
+            </div>
+        </section>
+
+        <!-- Product Search and Filter -->
+        <section class="product-filter">
+            <div class="container">
+                <div class="search-bar">
+                    <input type="text" id="product-search" placeholder="Search products...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="filter-options">
+                    <select id="category-filter">
+                        <option value="all">All Categories</option>
+                        <option value="avrs">AVRs</option>
+                        <option value="controllers">Controllers</option>
+                        <option value="chargers">Chargers</option>
+                        <option value="accessories">Accessories</option>
+                        <option value="starters">Starters</option>
+                        <option value="pumps">Pumps</option>
+                    </select>
+                    <select id="brand-filter">
+                        <option value="all">All Brands</option>
+                        <option value="stamford">Stamford</option>
+                        <option value="leroy-somer">Leroy Somer</option>
+                        <option value="dse">Deep Sea Electronics</option>
+                        <option value="smartgen">Smartgen</option>
+                        <option value="perkins">Perkins</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Categories -->
+        <section class="product-categories">
+            <div class="container">
+                <ul class="category-tabs">
+                    <li><a href="#avrs" class="active">AVRs</a></li>
+                    <li><a href="#controllers">Controllers</a></li>
+                    <li><a href="#chargers">Chargers</a></li>
+                    <li><a href="#accessories">Accessories</a></li>
+                    <li><a href="#starters">Starters</a></li>
+                    <li><a href="#pumps">Pumps</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- AVRs Section -->
+        <section id="avrs" class="product-section">
+            <div class="container">
+                <h2 class="section-title">Automatic Voltage Regulators (AVRs)</h2>
+                <p class="section-desc">High-quality AVRs for stable generator voltage output.</p>
+                
+                <div class="products-grid">
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="images/avr-sx460.jpg" alt="SX 460 AVR">
+                        </div>
+                        <div class="product-info">
+                            <h3>SX 460 AVR</h3>
+                            <p class="brand">Stamford</p>
+                            <p class="description">Standard AVR for Stamford generators up to 100kVA.</p>
+                            <a href="https://wa.me/1234567890?text=Hello%20Steve%20and%20Robert,%20I'm%20interested%20in%20the%20SX%20460%20AVR.%20Please%20provide%20more%20information." class="btn btn-sm">
+                                <i class="fab fa-whatsapp"></i> Inquire
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="images/avr-as480.jpg" alt="AS 480 AVR">
+                        </div>
+                        <div class="product-info">
+                            <h3>AS 480 AVR</h3>
+                            <p class="brand">Stamford</p>
+                            <p class="description">Advanced AVR for Stamford generators from 100kVA to 500kVA.</p>
+                            <a href="https://wa.me/1234567890?text=Hello%20Steve%20and%20Robert,%20I'm%20interested%20in%20the%20AS%20480%20AVR.%20Please%20provide%20more%20information." class="btn btn-sm">
+                                <i class="fab fa-whatsapp"></i> Inquire
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="images/avr-r230.jpg" alt="R230 AVR">
+                        </div>
+                        <div class="product-info">
+                            <h3>R230 AVR</h3>
+                            <p class="brand">Leroy Somer</p>
+                            <p class="description">Standard AVR for Leroy Somer generators up to 100kVA.</p>
+                            <a href="https://wa.me/1234567890?text=Hello%20Steve%20and%20Robert,%20I'm%20interested%20in%20the%20R230%20AVR.%20Please%20provide%20more%20information." class="btn btn-sm">
+                                <i class="fab fa-whatsapp"></i> Inquire
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="images/avr-r250.jpg" alt="R250 AVR">
+                        </div>
+                        <div class="product-info">
+                            <h3>R250 AVR</h3>
+                            <p class="brand">Leroy Somer</p>
+                            <p class="description">Advanced AVR for Leroy Somer generators from 100kVA to 350kVA.</p>
+                            <a href="https://wa.me/1234567890?text=Hello%20Steve%20and%20Robert,%20I'm%20interested%20in%20the%20R250%20AVR.%20Please%20provide%20more%20information." class="btn btn-sm">
+                                <i class="fab fa-whatsapp"></i> Inquire
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Controllers Section -->
+        <section id="controllers" class="product-section alt-bg">
+            <div class="container">
+                <h2 class="section-title">Controller Modules</h2>
+                <p class="section-desc">Advanced control modules for generator management and monitoring.</p>
+                
+                <div class="products-grid">
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="images/controller-pw1.jpg" alt="Power Wizard 1.0">
+                        </div>
+                        <div class="product-info">
+                            <h3>Power Wizard 1.0</h3>
+                            <p class="brand">FG Wilson</p>
+                            <p class="description">Basic controller for FG Wilson generators with essential monitoring features.</p>
+                            <a href="https://wa.me/1234567890?text=Hello%20Steve%20and%20Robert,%20I'm%20interested%20in%20the%20Power%20Wizard%201.0%20controller.%20Please%20provide%20more%20information." class="btn btn-sm">
+                                <i class="fab fa-whatsapp"></i> Inquire
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="images/controller-pw11.jpg" alt="Power Wizard 1.1+">
+                        </div>
+                        <div class="product-info">
+                            <h3>Power Wizard 1.1+</h3>
+                            <p class="brand">FG Wilson</p>
+                            <p class="description">Advanced controller with enhanced monitoring and control capabilities.</p>
+                            <a href="https://wa.me/1234567890?text=Hello%20Steve%20and%20Robert,%20I'm%20interested%20in%20the%20Power%20Wizard%201.1%2B%20controller.%20Please%20provide%20more%20information." class="btn btn-sm">
+                                <i class="fab fa-whatsapp"></i> Inquire
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="images/controller-dse5110.jpg" alt="DSE 5110">
+                        </div>
+                        <div class="product-info">
+                            <h3>DSE 5110</h3>
+                            <p class="brand">Deep Sea Electronics</p>
+                            <p class="description">Basic auto start control module for single generator applications.</p>
+                            <a href="https://wa.me/1234567890?text=Hello%20Steve%20and%20Robert,%20I'm%20interested%20in%20the%20DSE%205110%20controller.%20Please%20provide%20more%20information." class="btn btn-sm">
+                                <i class="fab fa-whatsapp"></i> Inquire
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="images/controller-dse7320.jpg" alt="DSE 7320">
+                        </div>
+                        <div class="product-info">
+                            <h3>DSE 7320</h3>
+                            <p class="brand">Deep Sea Electronics</p>
+                            <p class="description">Advanced auto start control module with comprehensive monitoring features.</p>
+                            <a href="https://wa.me/1234567890?text=Hello%20Steve%20and%20Robert,%20I'm%20interested%20in%20the%20DSE%207320%20controller.%20Please%20provide%20more%20information." class="btn btn-sm">
+                                <i class="fab fa-whatsapp"></i> Inquire
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chargers Section -->
+        <section id="chargers" class="product-section">
+            <div class="container">
+                <h2 class="section-title">Trickle Chargers</h2>
+                <p class="section-desc">Reliable battery chargers to keep your generator ready for action.</p>
+                
+                <div class="products-grid">
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="images/charger-smartgen.jpg" alt="Smartgen BAC06A">
+                        </div>
+                        <div class="product-info">
+                            <h3>Smartgen BAC06A</h3>
+                            <p class="brand">Smartgen</p>
+                            <p class="description">6A automatic battery charger with float/boost charging modes.</p>
+                            <a href="https://wa.me/1234567890?text=Hello%20Steve%20and%20Robert,%20I'm%20interested%20in%20the%20Smartgen%20BAC06A%20charger.%20Please%20provide%20more%20information." class="btn btn-sm">
+                                <i class="fab fa-whatsapp"></i> Inquire
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="images/charger-lovato.jpg" alt="Lovato BC30">
+                        </div>
+                        <div class="product-info">
+                            <h3>Lovato BC30</h3>
+                            <p class="brand">Lovato</p>
+                            <p class="description">3A battery charger with LED status indicators.</p>
+                            <a href="https://wa.me/1234567890?text=Hello%20Steve%20and%20Robert,%20I'm%20interested%20in%20the%20Lovato%20BC30%20charger.%20Please%20provide%20more%20information." class="btn btn-sm">
+                                <i class="fab fa-whatsapp"></i> Inquire
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="images/charger-dse.jpg" alt="DSE 9150">
+                        </div>
+                        <div class="product-info">
+                            <h3>DSE 9150</h3>
+                            <p class="brand">Deep Sea Electronics</p>
+                            <p class="description">5A intelligent battery charger with temperature compensation.</p>
+                            <a href="https://wa.me/1234567890?text=Hello%20Steve%20and%20Robert,%20I'm%20interested%20in%20the%20DSE%209150%20charger.%20Please%20provide%20more%20information." class="btn btn-sm">
+                                <i class="fab fa-whatsapp"></i> Inquire
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- More Product Categories -->
+        <section id="accessories" class="product-section alt-bg">
+            <div class="container">
+                <h2 class="section-title">Generator Accessories</h2>
+                <p class="section-desc">Essential accessories for generator operation and protection.</p>
+                
+                <div class="products-grid">
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="images/accessory-phase.jpg" alt="GIC Phase Failure">
+                        </div>
+                        <div class="product-info">
+                            <h3>GIC Phase Failure Relay</h3>
+                            <p class="brand">GIC</p>
+                            <p class="description">Protects against phase loss, phase reversal, and voltage imbalance.</p>
+                            <a href="https://wa.me/1234567890?text=Hello%20Steve%20and%20Robert,%20I'm%20interested%20in%20the%20GIC%20Phase%20Failure%20Relay.%20Please%20provide%20more%20information." class="btn btn-sm">
+                                <i class="fab fa-whatsapp"></i> Inquire
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="images/accessory-timer.jpg" alt="GIC Delay Timer">
+                        </div>
+                        <div class="product-info">
+                            <h3>GIC Delay Timer</h3>
+                            <p class="brand">GIC</p>
+                            <p class="description">Adjustable time delay relay for generator control applications.</p>
+                            <a href="https://wa.me/1234567890?text=Hello%20Steve%20and%20Robert,%20I'm%20interested%20in%20the%20GIC%20Delay%20Timer.%20Please%20provide%20more%20information." class="btn btn-sm">
+                                <i class="fab fa-whatsapp"></i> Inquire
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="images/accessory-oil.jpg" alt="VDO Oil Switch">
+                        </div>
+                        <div class="product-info">
+                            <h3>VDO Oil Pressure Switch</h3>
+                            <p class="brand">VDO</p>
+                            <p class="description">Reliable oil pressure monitoring switch for generator protection.</p>
+                            <a href="https://wa.me/1234567890?text=Hello%20Steve%20and%20Robert,%20I'm%20interested%20in%20the%20VDO%20Oil%20Pressure%20Switch.%20Please%20provide%20more%20information." class="btn btn-sm">
+                                <i class="fab fa-whatsapp"></i> Inquire
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="images/accessory-temp.jpg" alt="VDO Temperature Switch">
+                        </div>
+                        <div class="product-info">
+                            <h3>VDO Temperature Switch</h3>
+                            <p class="brand">VDO</p>
+                            <p class="description">Temperature monitoring switch for generator cooling system protection.</p>
+                            <a href="https://wa.me/1234567890?text=Hello%20Steve%20and%20Robert,%20I'm%20interested%20in%20the%20VDO%20Temperature%20Switch.%20Please%20provide%20more%20information." class="btn btn-sm">
+                                <i class="fab fa-whatsapp"></i> Inquire
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Starters Section -->
+        <section id="starters" class="product-section">
+            <div class="container">
+                <h2 class="section-title">Generator Starters</h2>
+                <p class="section-desc">Reliable starter systems for all generator types.</p>
+                
+                <div class="products-grid">
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="images/starter-dol.jpg" alt="DOL Starter">
+                        </div>
+                        <div class="product-info">
+                            <h3>Direct On Line (DOL) Starter</h3>
+                            <p class="brand">Various</p>
+                              Starter</h3>
+                            <p class="brand">Various</p>
+                            <p class="description">Basic starter for direct connection of generator to the power supply.</p>
+                            <a href="https://wa.me/1234567890?text=Hello%20Steve%20and%20Robert,%20I'm%20interested%20in%20the%20DOL%20Starter.%20Please%20provide%20more%20information." class="btn btn-sm">
+                                <i class="fab fa-whatsapp"></i> Inquire
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="images/starter-star-delta.jpg" alt="Star Delta Starter">
+                        </div>
+                        <div class="product-info">
+                            <h3>Star Delta Starter</h3>
+                            <p class="brand">Various</p>
+                            <p class="description">Reduced current starter for larger generators with smoother starting.</p>
+                            <a href="https://wa.me/1234567890?text=Hello%20Steve%20and%20Robert,%20I'm%20interested%20in%20the%20Star%20Delta%20Starter.%20Please%20provide%20more%20information." class="btn btn-sm">
+                                <i class="fab fa-whatsapp"></i> Inquire
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="images/starter-ats.jpg" alt="Automatic Changeover Switch">
+                        </div>
+                        <div class="product-info">
+                            <h3>Automatic Changeover Switch</h3>
+                            <p class="brand">Various</p>
+                            <p class="description">Automatic transfer switch for seamless power transition during outages.</p>
+                            <a href="https://wa.me/1234567890?text=Hello%20Steve%20and%20Robert,%20I'm%20interested%20in%20the%20Automatic%20Changeover%20Switch.%20Please%20provide%20more%20information." class="btn btn-sm">
+                                <i class="fab fa-whatsapp"></i> Inquire
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pumps Section -->
+        <section id="pumps" class="product-section alt-bg">
+            <div class="container">
+                <h2 class="section-title">Generator Water Pumps</h2>
+                <p class="section-desc">High-quality water pumps for generator cooling systems.</p>
+                
+                <div class="products-grid">
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="images/pump-perkins-dj.jpg" alt="Perkins DJ 30kVA">
+                        </div>
+                        <div class="product-info">
+                            <h3>Perkins DJ 30kVA Water Pump</h3>
+                            <p class="brand">Perkins</p>
+                            <p class="description">Water pump for Perkins DJ series 30kVA generators.</p>
+                            <a href="https://wa.me/1234567890?text=Hello%20Steve%20and%20Robert,%20I'm%20interested%20in%20the%20Perkins%20DJ%2030kVA%20Water%20Pump.%20Please%20provide%20more%20information." class="btn btn-sm">
+                                <i class="fab fa-whatsapp"></i> Inquire
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="images/pump-perkins-dk.jpg" alt="Perkins DK 60kVA">
+                        </div>
+                        <div class="product-info">
+                            <h3>Perkins DK 60kVA Water Pump</h3>
+                            <p class="brand">Perkins</p>
+                            <p class="description">Water pump for Perkins DK series 60kVA generators.</p>
+                            <a href="https://wa.me/1234567890?text=Hello%20Steve%20and%20Robert,%20I'm%20interested%20in%20the%20Perkins%20DK%2060kVA%20Water%20Pump.%20Please%20provide%20more%20information." class="btn btn-sm">
+                                <i class="fab fa-whatsapp"></i> Inquire
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="images/pump-universal.jpg" alt="Universal Water Pump">
+                        </div>
+                        <div class="product-info">
+                            <h3>Universal Generator Water Pump</h3>
+                            <p class="brand">Various</p>
+                            <p class="description">Adaptable water pump compatible with multiple generator models.</p>
+                            <a href="https://wa.me/1234567890?text=Hello%20Steve%20and%20Robert,%20I'm%20interested%20in%20the%20Universal%20Generator%20Water%20Pump.%20Please%20provide%20more%20information." class="btn btn-sm">
+                                <i class="fab fa-whatsapp"></i> Inquire
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Inquiry -->
+        <section class="product-inquiry">
+            <div class="container">
+                <h2 class="section-title">Can't Find What You Need?</h2>
+                <p>We stock a wide range of generator parts and accessories beyond what's listed here. If you don't see what you're looking for, contact us and we'll help you find it.</p>
+                <a href="https://wa.me/1234567890?text=Hello%20Steve%20and%20Robert,%20I'm%20looking%20for%20a%20specific%20generator%20part%20that%20I%20don't%20see%20on%20your%20website.%20Can%20you%20help%20me%20find%20it?" class="btn btn-primary">
+                    <i class="fab fa-whatsapp"></i> Ask About Specific Parts
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="Steve and Robert Generators Services Ltd.">
+                    <p>Powering Reliability. Driven by Trust.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services.html#repairs">Generator Repairs</a></li>
+                        <li><a href="services.html#servicing">Generator Servicing</a></li>
+                        <li><a href="services.html#installation">Installation & Testing</a></li>
+                        <li><a href="services.html#control">Control System Diagnosis</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+254112733574">01 12 733 574</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@steveandrobertgenerators.com">email comes here...</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Nairobi</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 8am-6pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Steve and Robert Generators Services Ltd. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="whatsapp-float">
+        <a href="https://wa.me/112733574?text=Hello%20Steve%20and%20Robert,%20I'm%20interested%20in%20your%20services.%20Please%20share%20more%20details." target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+   <script src="./js/script.js"></script>
+</body>
+</html>
