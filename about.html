@@ -5,16 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Steve and Robert Generators Services Ltd.</title>
       <link rel="stylesheet" href="/css/styles.css">
+      <link rel="stylesheet" href="/css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <div class="top-bar" id="topBar">
+  <div class="left">
+    <span>📞 0722436270 / 0722855254</span>
+    <a href="mailto:steverobertsgeneratorsltd@gmail.com" class="email-button">
+      📧 Email Us
+    </a>
+  </div>
+  <div class="right">
+    <span>Your Sustainable Power Solution</span>
+    <span>• Sales • Installations • Maintenance</span>
+  </div>
+</div>
     <header>
         <div class="container">
             <div class="logo">
-                <img src="images/logo.png" alt="Steve and Robert Generators Services Ltd.">
+               <img src="images/logo/logo.jfif" alt="Steve and Robert Generators Services Ltd.">
             </div>
             <nav>
                 <button class="mobile-menu-btn">
@@ -28,6 +41,7 @@
                     <li><a href="services.html">Services</a></li>
                     <li><a href="products.html">Products</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                     <li><a href="knowledgebase.html" class="active">Learn</a></li>
                 </ul>
             </nav>
         </div>
@@ -109,30 +123,39 @@
             </div>
         </section>
 
-        <!-- The Team -->
-        <section class="team-section">
-            <div class="container">
-                <h2 class="section-title">Meet Our Team</h2>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <div class="member-image">
-                            <img src="images/steve.jpg" alt="Steve">
-                        </div>
-                        <h3>Steven Mbugua</h3>
-                        <p class="position">Co-Founder & Technical Director</p>
-                        <p>With 8+ years of experience in generator systems, Steve leads our technical operations and specializes in complex diagnostics.</p>
-                    </div>
-                    <div class="team-member">
-                        <div class="member-image">
-                            <img src="images/robert.jpg" alt="Robert">
-                        </div>
-                        <h3>Robert</h3>
-                        <p class="position">Co-Founder & Operations Director</p>
-                        <p>Robert brings 8+ years of industry experience and oversees our service delivery, ensuring quality and customer satisfaction.</p>
-                    </div>
+      <!-- The Team -->
+<section class="team-section">
+    <div class="container">
+        <h2 class="section-title">Our Expert Team</h2>
+        <p class="team-intro">
+            Behind every successful installation and maintenance is our highly skilled and experienced team.
+            With over 8+ years of combined expertise in generator systems, our technicians ensure top-quality service, diagnostics, and operational excellence.
+        </p>
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="member-image">
+                    <img src="images/team/person1.jfif" alt="Generator Expert">
                 </div>
+                <h3>Technical Experts</h3>
+                <p class="position">Installation & Diagnostics</p>
+                <p>
+                    Our technical professionals specialize in generator installations, complex fault diagnostics, and power solutions tailored to your needs.
+                </p>
             </div>
-        </section>
+            <div class="team-member">
+                <div class="member-image">
+                    <img src="images/team/person2.jfif" alt="Service Specialist">
+                </div>
+                <h3>Service Specialists</h3>
+                <p class="position">Operations & Maintenance</p>
+                <p>
+                    The operations team ensures efficient service delivery, preventive maintenance, and round-the-clock support for generator performance.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
 
         <!-- Our Guarantee -->
         <section class="guarantee-section">
@@ -142,7 +165,7 @@
                         <h2 class="section-title">Our Guarantee</h2>
                         <p>At Steve and Robert Generators Services Ltd., we stand behind our work with confidence. Our service guarantee includes:</p>
                         <ul class="guarantee-list">
-                            <li><i class="fas fa-shield-alt"></i> 90-day warranty on all repairs</li>
+                            <li><i class="fas fa-shield-alt"></i> Agreed upon warranty on all repairs</li>
                             <li><i class="fas fa-shield-alt"></i> Genuine parts used for all services</li>
                             <li><i class="fas fa-shield-alt"></i> Transparent pricing with no hidden fees</li>
                             <li><i class="fas fa-shield-alt"></i> Timely service delivery</li>
@@ -151,7 +174,7 @@
                         <p>We're not satisfied until you're satisfied with our work.</p>
                     </div>
                     <div class="guarantee-image">
-                        <img src="images/guarantee.jpg" alt="Our Guarantee">
+                        <img src="images/team/warranty.jfif" alt="Our Guarantee">
                     </div>
                 </div>
             </div>
@@ -162,19 +185,25 @@
             <div class="container">
                 <h2>Ready to experience our expert services?</h2>
                 <p>Contact us today to discuss your generator needs.</p>
-                <a href="https://wa.me/1234567890?text=Hello%20Steve%20and%20Robert,%20I'd%20like%20to%20learn%20more%20about%20your%20services.%20Please%20contact%20me." class="btn btn-primary">
+                <a href="https://wa.me/722436270?text=Hello%20Steve%20and%20Robert,%20I'd%20like%20to%20learn%20more%20about%20your%20services.%20Please%20contact%20me." class="btn btn-primary">
                     <i class="fab fa-whatsapp"></i> Chat with Us on WhatsApp
                 </a>
             </div>
         </section>
     </main>
 
+    <!-- SCROLL TO TOP BUTTON -->
+      <!-- back-to-top.html -->
+<button id="back-to-top" title="Back to top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="images/logo.png" alt="Steve and Robert Generators Services Ltd.">
-                    <p>Powering Reliability. Driven by Trust.</p>
+                    <img src="images/logo/logo.jfif" alt="Steve and Robert Generators Services Ltd.">
+                    <p>Your Sustainable Power Solution.</p>
                 </div>
                 <div class="footer-links">
                     <h3>Quick Links</h3>
@@ -198,9 +227,10 @@
                 <div class="footer-contact">
                     <h3>Contact Us</h3>
                     <ul>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+254112733574">01 12 733 574</a></li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@steveandrobertgenerators.com">email comes here...</a></li>
-                        <li><i class="fas fa-map-marker-alt"></i> Nairobi</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+254722436270">0722 436 270</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:steverobertsgenerationsltd@gmail.com">steverobertsgenerationsltd@gmail.com</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Travellers House, Room 16, Kirinyaga Road, Accra lane
+P.O. BOX 75984-00200 NRB,</li>
                         <li><i class="fas fa-clock"></i> Mon-Fri: 8am-6pm</li>
                     </ul>
                 </div>
@@ -216,10 +246,11 @@
     </footer>
 
     <div class="whatsapp-float">
-        <a href="https://wa.me/112733574?text=Hello%20Steve%20and%20Robert,%20I'm%20interested%20in%20your%20services.%20Please%20share%20more%20details." target="_blank">
+        <a href="https://wa.me/722436270?text=Hello%20Steve%20and%20Robert,%20I'm%20interested%20in%20your%20services.%20Please%20share%20more%20details." target="_blank">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
     <script src="./js/script.js"></script>
+    <script src="./js/top.js"></script>
 </body>
 </html>

@@ -274,3 +274,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 })
+
+// back to top button functionality
+ const backToTopBtn = document.getElementById('back-to-top');
+
+  // Show/hide button on scroll
+  window.addEventListener('scroll', () => {
+    backToTopBtn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+  });
+
+  // Smooth scroll to top on click
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+

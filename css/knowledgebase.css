@@ -1,0 +1,40 @@
+.knowledge-main {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    background: #f9f9f9;
+    padding-bottom: 3rem;
+}
+
+.hero-knowledge {
+    background: #0c3b4f;
+    color: #fff;
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.hero-knowledge h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.knowledge-section {
+    margin: 3rem auto;
+    max-width: 900px;
+    padding: 0 1.5rem;
+}
+
+.knowledge-section h2 {
+    color: #0c3b4f;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.knowledge-section ul, .knowledge-section ol {
+    margin-left: 1.5rem;
+    line-height: 1.8;
+}
+
+.knowledge-section p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}

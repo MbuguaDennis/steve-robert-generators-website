@@ -1,0 +1,37 @@
+.products-cta {
+  background: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.products-cta .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.products-cta h2 {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.products-cta p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.products-cta .btn-primary {
+  background: var(--accent-color);
+  color: var(--dark);
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.products-cta .btn-primary:hover {
+  opacity: 0.9;
+}
