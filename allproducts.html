@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Steve and Roberts Products Gallery</title>
-  <link rel="stylesheet" href="./css/allproducts.css">
-  <link rel="stylesheet" href="./css/styles.css">
-  <link rel="stylesheet" href="/css/global.css">
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steve and Robert Generators Services Ltd.</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/allproducts.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="top-bar" id="topBar">
+  <div class="top-bar" id="topBar">
   <div class="left">
     <span>📞 0722436270 / 0722855254</span>
     <a href="mailto:steverobertsgeneratorsltd@gmail.com" class="email-button">
@@ -22,9 +25,10 @@
     <span>• Sales • Installations • Maintenance</span>
   </div>
 </div>
-       <header>
+<!-- HEADER SECTION START -->
+    <header>
         <div class="container">
-            <div class="logo">
+            <div class="logo" id="website-logo">
                 <img src="images/logo/logo.jfif" alt="Steve and Robert Generators Services Ltd.">
             </div>
             <nav>
@@ -44,231 +48,471 @@
             </nav>
         </div>
     </header>
+    <!-- HEADER SECTION END -->
+  <header class="hero-section">
+    <h1>Explore Our Equipment Gallery — Quality You Can Trust. Contact us below each item.</h1>
+  </header>
 
-  <section class="hero-section">
-    <h1> Explore Our Equipment Gallery — Quality You Can Trust.  
-    Contact us via WhatsApp below each item.</h1>
-  </section>
-
-  <section class="product-grid" aria-label="Product gallery">
-    <!-- Product cards inserted by JS -->
-  </section>
-
-  <!-- Lightbox modal -->
-  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" tabindex="-1">
-    <button id="lightbox-close" aria-label="Close">&times;</button>
-    <img id="lightbox-img" src="" alt="Expanded product image" tabindex="0" />
-    <div id="lightbox-controls">
-      <button class="lightbox-btn" id="prev-btn" aria-label="Previous image">&#8592;</button>
-      <button class="lightbox-btn" id="next-btn" aria-label="Next image">&#8594;</button>
-    </div>
-  </div>
-
-  <script>
-    const productGrid = document.querySelector(".product-grid");
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-    const closeBtn = document.getElementById("lightbox-close");
-    const prevBtn = document.getElementById("prev-btn");
-    const nextBtn = document.getElementById("next-btn");
-
-    // Store image URLs
-    const images = [];
-
-    for (let i = 1; i <= 56; i++) {
-      const ext = (i === 55 || i === 56) ? 'jfif' : 'jpg';
-      const imgSrc = `allimages/image${i}.${ext}`;
-      images.push(imgSrc);
-
-      // WhatsApp message for each item
-      const message = encodeURIComponent(`Hello, I’m interested in Item ${i}. Please provide more details.`);
-
-      // Create product card element
-      const card = document.createElement("div");
-      card.className = "product-card";
-      card.innerHTML = `
-        <img src="${imgSrc}" alt="Item ${i}" data-index="${i - 1}" tabindex="0" />
-        <div class="product-content">
-          <h3>Avaible item</h3>
-          <p>High-quality equipment. Contact us for details.</p>
-          <div class="cta-buttons">
-            <a href="https://wa.me/254722436270?text=${message}" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp contact 0722436270 for Item ${i}">0722436270</a>
-            <a href="https://wa.me/254722855254?text=${message}" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp contact 0722855254 for Item ${i}">0722855254</a>
+  <main>
+ <!-- AVRs -->
+    <section class="category">
+      <h2>Automatic Voltage Regulators (AVRs)</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="images/products/automatic_voltage_regulators/As-440 -avr.jpg" alt="AS-440 AVR" />
+          <div class="product-content">
+            <h3>AS-440 AVR</h3>
+            <p>Reliable and durable voltage regulator for generators.</p>
+            <div class="cta-buttons">
+              <a href="https://wa.me/254722436270?text=Hello, I am interested in AS-440 AVR" target="_blank">WhatsApp</a>
+              <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=AS-440%20AVR%20Enquiry">Email</a>
+            </div>
           </div>
         </div>
-      `;
-      productGrid.appendChild(card);
-    }
-
-    let currentIndex = 0;
-
-    function openLightbox(index) {
-      currentIndex = index;
-      lightboxImg.src = images[currentIndex];
-      lightbox.classList.add("active");
-      document.body.style.overflow = 'hidden'; // prevent background scroll
-      lightbox.setAttribute('tabindex', '0');
-      lightbox.focus();
-      trapFocus(lightbox);
-    }
-
-    function closeLightbox() {
-      lightbox.classList.remove("active");
-      lightboxImg.src = "";
-      document.body.style.overflow = ''; // restore scroll
-      releaseFocusTrap();
-    }
-
-    function showPrev() {
-      currentIndex = (currentIndex - 1 + images.length) % images.length;
-      lightboxImg.src = images[currentIndex];
-    }
-
-    function showNext() {
-      currentIndex = (currentIndex + 1) % images.length;
-      lightboxImg.src = images[currentIndex];
-    }
-
-    // Event delegation for image clicks and keyboard enter/space on images
-    productGrid.addEventListener("click", (e) => {
-      if (e.target.tagName === "IMG") {
-        const idx = parseInt(e.target.getAttribute("data-index"));
-        if (!isNaN(idx)) openLightbox(idx);
-      }
-    });
-
-    productGrid.addEventListener("keydown", (e) => {
-      if (e.target.tagName === "IMG" && (e.key === "Enter" || e.key === " ")) {
-        e.preventDefault();
-        const idx = parseInt(e.target.getAttribute("data-index"));
-        if (!isNaN(idx)) openLightbox(idx);
-      }
-    });
-
-    closeBtn.addEventListener("click", closeLightbox);
-    prevBtn.addEventListener("click", showPrev);
-    nextBtn.addEventListener("click", showNext);
-
-    // Close lightbox on background click (not on image or buttons)
-    lightbox.addEventListener("click", (e) => {
-      if (e.target === lightbox) {
-        closeLightbox();
-      }
-    });
-
-    // Keyboard navigation: Esc to close, arrows to navigate
-    document.addEventListener("keydown", (e) => {
-      if (!lightbox.classList.contains("active")) return;
-
-      switch(e.key) {
-        case "Escape":
-          closeLightbox();
-          break;
-        case "ArrowLeft":
-          showPrev();
-          break;
-        case "ArrowRight":
-          showNext();
-          break;
-      }
-    });
-
-    // Focus trap implementation inside lightbox
-    let focusableElements = [];
-    let firstFocusable, lastFocusable;
-
-    function trapFocus(element) {
-      focusableElements = element.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-      if (focusableElements.length === 0) return;
-      firstFocusable = focusableElements[0];
-      lastFocusable = focusableElements[focusableElements.length - 1];
-
-      element.addEventListener('keydown', handleFocusTrap);
-    }
-
-    function releaseFocusTrap() {
-      lightbox.removeEventListener('keydown', handleFocusTrap);
-    }
-
-    function handleFocusTrap(e) {
-      if (e.key !== 'Tab') return;
-
-      if (e.shiftKey) { // shift + tab
-        if (document.activeElement === firstFocusable) {
-          e.preventDefault();
-          lastFocusable.focus();
-        }
-      } else { // tab
-        if (document.activeElement === lastFocusable) {
-          e.preventDefault();
-          firstFocusable.focus();
-        }
-      }
-    }
-  </script>
-     <!-- back-to-top.html -->
-<button id="back-to-top" title="Back to top">
-  <i class="fas fa-chevron-up"></i>
-</button>
-
-
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                     <img src="images/logo/logo.jfif" alt="Steve and Robert Generators Services Ltd.">
-                    <p>Your Sustainable Power Solution.</p>
-                </div>
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-services">
-                    <h3>Our Services</h3>
-                    <ul>
-                        <li><a href="services.html#repairs">Generator Repairs</a></li>
-                        <li><a href="services.html#servicing">Generator Servicing</a></li>
-                        <li><a href="services.html#installation">Installation & Testing</a></li>
-                        <li><a href="services.html#control">Control System Diagnosis</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h3>Contact Us</h3>
-                    <ul>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+254722436270">0722 436 270</a></li>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+254722855254">0722 855 254</a></li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@steveandrobertgenerators.com">steverobertsgenerationsltd@gmail.com</a></li>
-                        <li><i class="fas fa-map-marker-alt"></i> Nairobi</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Travellers House, Room 16, Kirinyaga Road, Accra lane
-</li>
-<li>P.O. BOX 75984-00200 NRB,</li>
-                        <li><i class="fas fa-clock"></i> Mon-Fri: 8am-6pm</li>
-                    </ul>
-                </div>
+        <div class="product-card">
+          <img src="images/products/automatic_voltage_regulators/As-480-avr.jpg" alt="AS-480 AVR">
+          <div class="product-content">
+            <h3>AS-480 AVR</h3>
+            <p>Reliable and durable voltage regulator for generators.</p>
+            <div class="cta-buttons">
+              <a href="https://wa.me/254722436270?text=Hello, I am interested in AS-480 AVR" target="_blank">WhatsApp</a>
+              <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=AS-480%20AVR%20Enquiry">Email</a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Steve and Robert Generators Services Ltd. All rights reserved.</p>
-                <div class="footer-legal">
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms of Service</a>
-                </div>
-            </div>
+          </div>
         </div>
-    </footer>
+        <div class="product-card">
+          <img src="images/products/automatic_voltage_regulators/Dsr avr.jpg" alt="DSR AVR">
+          <div class="product-content">
+            <h3>DSR AVR</h3>
+            <p>Reliable and durable voltage regulator for generators.</p>
+            <div class="cta-buttons">
+              <a href="https://wa.me/254722436270?text=Hello, I am interested in DSR AVR" target="_blank">WhatsApp</a>
+              <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=DSR%20AVR%20Enquiry">Email</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/products/automatic_voltage_regulators/Gavr8 avr.jpg" alt="GAVR8 AVR">
+          <div class="product-content">
+            <h3>GAVR8 AVR</h3>
+            <p>Reliable and durable voltage regulator for generators.</p>
+            <div class="cta-buttons">
+              <a href="https://wa.me/254722436270?text=Hello, I am interested in GAVR8 AVR" target="_blank">WhatsApp</a>
+              <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=GAVR8%20AVR%20Enquiry">Email</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/products/automatic_voltage_regulators/Mx341_avr.jpg" alt="MX341 AVR">
+          <div class="product-content">
+            <h3>MX341 AVR</h3>
+            <p>Reliable and durable voltage regulator for generators.</p>
+            <div class="cta-buttons">
+              <a href="https://wa.me/254722436270?text=Hello, I am interested in MX341 AVR" target="_blank">WhatsApp</a>
+              <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=MX341%20AVR%20Enquiry">Email</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/products/automatic_voltage_regulators/R230 avr.jpg" alt="R230 AVR">
+          <div class="product-content">
+            <h3>R230 AVR</h3>
+            <p>Reliable and durable voltage regulator for generators.</p>
+            <div class="cta-buttons">
+              <a href="https://wa.me/254722436270?text=Hello, I am interested in R230 AVR" target="_blank">WhatsApp</a>
+              <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=R230%20AVR%20Enquiry">Email</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/products/automatic_voltage_regulators/R250 avr.jpg" alt="R250 AVR">
+          <div class="product-content">
+            <h3>R250 AVR</h3>
+            <p>Reliable and durable voltage regulator for generators.</p>
+            <div class="cta-buttons">
+              <a href="https://wa.me/254722436270?text=Hello, I am interested in R250 AVR" target="_blank">WhatsApp</a>
+              <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=R250%20AVR%20Enquiry">Email</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/products/automatic_voltage_regulators/R448 avr.jpg" alt="R448 AVR">
+          <div class="product-content">
+            <h3>R448 AVR</h3>
+            <p>Reliable and durable voltage regulator for generators.</p>
+            <div class="cta-buttons">
+              <a href="https://wa.me/254722436270?text=Hello, I am interested in R448 AVR" target="_blank">WhatsApp</a>
+              <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=R448%20AVR%20Enquiry">Email</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/products/automatic_voltage_regulators/Sr7 avr.jpg" alt="SR7 AVR">
+          <div class="product-content">
+            <h3>SR7 AVR</h3>
+            <p>Reliable and durable voltage regulator for generators.</p>
+            <div class="cta-buttons">
+              <a href="https://wa.me/254722436270?text=Hello, I am interested in SR7 AVR" target="_blank">WhatsApp</a>
+              <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=SR7%20AVR%20Enquiry">Email</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/products/automatic_voltage_regulators/Sx460 avr.jpg" alt="SX460 AVR">
+          <div class="product-content">
+            <h3>SX460 AVR</h3>
+            <p>Reliable and durable voltage regulator for generators.</p>
+            <div class="cta-buttons">
+              <a href="https://wa.me/254722436270?text=Hello, I am interested in SX460 AVR" target="_blank">WhatsApp</a>
+              <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=SX460%20AVR%20Enquiry">Email</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="whatsapp-float">
-        <a href="https://wa.me/722436270?text=Hello%20Steve%20and%20Robert,%20I'm%20interested%20in%20your%20services.%20Please%20share%20more%20details." target="_blank">
-            <i class="fab fa-whatsapp"></i>
-        </a>
+    <!-- Controllers -->
+  <section class="category">
+  <h2>Generator Controllers</h2>
+  <div class="product-grid">
+
+    <div class="product-card">
+      <img src="images/products/controllers/710_auto-start-controller.jpg" alt="DSE 720 Controller" />
+      <div class="product-content">
+        <h3>DSE 710</h3>
+        <p>Smart controller for automatic generator operations and monitoring.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/254722436270?text=Hello, I am interested in DSE 720 Controller" target="_blank">WhatsApp</a>
+          <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=DSE%20720%20Controller%20Enquiry">Email</a>
+        </div>
+      </div>
     </div>
-    <script src="./js/script.js"></script>
-    <script src="./js/top.js"></script>
+
+    <div class="product-card">
+      <img src="images/products/controllers/3110_controller.jpg" alt="DSE 3110 Controller" />
+      <div class="product-content">
+        <h3>DSE 3110</h3>
+        <p>Compact controller for manual and automatic start systems.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/254722436270?text=Hello, I am interested in DSE 3110 Controller" target="_blank">WhatsApp</a>
+          <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=DSE%203110%20Controller%20Enquiry">Email</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="images/products/controllers/dse5110_controller.jpg" alt="DSE 5110 Controller" />
+      <div class="product-content">
+        <h3>DSE 5110</h3>
+        <p>Reliable controller with remote start and stop capabilities.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/254722436270?text=Hello, I am interested in DSE 5110 Controller" target="_blank">WhatsApp</a>
+          <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=DSE%205110%20Controller%20Enquiry">Email</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="images/products/controllers/5120_general_controller.jpg" alt="DSE 5120 Controller" />
+      <div class="product-content">
+        <h3>DSE 5120</h3>
+        <p>Advanced control panel for generator and mains monitoring.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/254722436270?text=Hello, I am interested in DSE 5120 Controller" target="_blank">WhatsApp</a>
+          <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=DSE%205120%20Controller%20Enquiry">Email</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="images/products/controllers/6020_controller.jpg" alt="DSE 6020 Controller" />
+      <div class="product-content">
+        <h3>DSE 6020</h3>
+        <p>Controller for both manual and automatic start systems with full diagnostics.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/254722436270?text=Hello, I am interested in DSE 6020 Controller" target="_blank">WhatsApp</a>
+          <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=DSE%206020%20Controller%20Enquiry">Email</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="images/products/controllers/6020_controller.jpg" alt="DSE 6120 Controller" />
+      <div class="product-content">
+        <h3>DSE 6120</h3>
+        <p>Automatic mains failure controller with full load management.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/254722436270?text=Hello, I am interested in DSE 6120 Controller" target="_blank">WhatsApp</a>
+          <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=DSE%206120%20Controller%20Enquiry">Email</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="images/products/controllers/710_auto-start-controller.jpg" alt="DSE 702 Controller" />
+      <div class="product-content">
+        <h3>DSE 702</h3>
+        <p>Basic key start controller with essential genset protection.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/254722436270?text=Hello, I am interested in DSE 702 Controller" target="_blank">WhatsApp</a>
+          <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=DSE%20702%20Controller%20Enquiry">Email</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="images/products/controllers/710_auto-start-controller.jpg" alt="DSE 710 Controller" />
+      <div class="product-content">
+        <h3>DSE 710</h3>
+        <p>Easy-to-use controller for both standby and prime applications.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/254722436270?text=Hello, I am interested in DSE 710 Controller" target="_blank">WhatsApp</a>
+          <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=DSE%20710%20Controller%20Enquiry">Email</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="images/products/controllers/dse_controller.jpg" alt="DSE 4520 Controller" />
+      <div class="product-content">
+        <h3>DSE 4520</h3>
+        <p>AMF controller designed for single genset applications with mains failure.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/254722436270?text=Hello, I am interested in DSE 4520 Controller" target="_blank">WhatsApp</a>
+          <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=DSE%204520%20Controller%20Enquiry">Email</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+    <section class="category">
+  <h2>Generator Speed Controllers</h2>
+  <div class="product-description-block">
+    <div class="product-image-group">
+      <img src="images/products/generator speed controllers/speed_controller1.jpg" alt="ESD5500E Controller" />
+      <img src="images/products/generator speed controllers/speed_controller2.jpg" alt="4913988 Controller" />
+      <img src="images/products/generator speed controllers/speed_controller3.jpg" alt="3062322 Controller" />
+       <img src="images/products/generator speed controllers/speed_controller4.jpg" alt="3062322 Controller" />
+        <img src="images/products/generator speed controllers/speed_controller5.jpg" alt="3062322 Controller" />
+         <img src="images/products/generator speed controllers/speed_controller6.jpg" alt="3062322 Controller" />
+          <img src="images/products/generator speed controllers/speed_controller7.jpg" alt="3062322 Controller" />
+      <!-- Add more images as needed -->
+    </div>
+    <div class="description-text">
+      <p>
+        We offer a wide range of generator speed controllers designed for stability and automatic engine regulation under varying loads. These controllers provide smooth performance and compatibility with major generator brands.
+      </p>
+      <div class="cta-buttons">
+        <a href="https://wa.me/254722436270?text=Hello, I am interested in Generator Speed Controllers" target="_blank">WhatsApp</a>
+        <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=Generator%20Speed%20Controllers%20Enquiry">Email</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Magnetic Pickups -->
+    <section class="category">
+  <h2>Magnetic Pickups</h2>
+  <div class="product-description-block">
+    <div class="product-image-group">
+      <img src="images/products/magnetic_pickups/magnetic_pick_up1.jpg" alt="Magnetic Pickup Sensor 1" />
+       <img src="images/products/magnetic_pickups/magnetic_pick_up2.jpg" alt="Magnetic Pickup Sensor 1" />
+        <img src="images/products/magnetic_pickups/magnetic_pick_up3.jpg" alt="Magnetic Pickup Sensor 1" />
+         <img src="images/products/magnetic_pickups/magnetic_pick_up4.jpg" alt="Magnetic Pickup Sensor 1" />
+    
+      <!-- Add more as needed -->
+    </div>
+    <div class="description-text">
+      <p>
+        Our magnetic pickup sensors are built for precision and durability, ensuring accurate speed detection in generator engines. Ideal for various industrial and commercial generator setups.
+      </p>
+      <div class="cta-buttons">
+        <a href="https://wa.me/254722436270?text=Hello, I am interested in Magnetic Pickup Sensors" target="_blank">WhatsApp</a>
+        <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=Magnetic%20Pickup%20Sensor%20Enquiry">Email</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Trickle Chargers -->
+   <section class="category">
+  <h2>Trickle Chargers</h2>
+  <div class="product-description-block">
+    <div class="product-image-group">
+      <img src="images/products/trickle_chargers/Dse trickle charger.jpg" alt="Trickle Charger 1" />
+       <img src="images/products/trickle_chargers/Lovato-trickle-charger.jpg" alt="Trickle Charger 1" />
+        <img src="images/products/trickle_chargers/lovato.jpg" alt="Trickle Charger 1" />
+         <img src="images/products/trickle_chargers/Smartgen trickle charger.jpg" alt="Trickle Charger 1" />
+    
+      <!-- Add more as needed -->
+    </div>
+    <div class="description-text">
+      <p>
+        Keep your batteries always ready with our dependable trickle chargers. Designed for steady charging without overloading — perfect for backup and standby generators.
+      </p>
+      <div class="cta-buttons">
+        <a href="https://wa.me/254722436270?text=Hello, I am interested in Trickle Chargers" target="_blank">WhatsApp</a>
+        <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=Trickle%20Charger%20Enquiry">Email</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Water Pumps -->
+    <section class="category">
+      <h2>Water Pumps</h2>
+      <div class="roduct-description-block">
+        <div class="product-image-group">
+          <img src="images/products/water_pumps/pump1.jpg" alt="Diesel Water Pump" />
+           <img src="images/products/water_pumps/pump2.jpg" alt="Diesel Water Pump" />
+            <img src="images/products/water_pumps/pump3.jpg" alt="Diesel Water Pump" />
+             <img src="images/products/water_pumps/pump4.jpg" alt="Diesel Water Pump" />
+              <img src="images/products/water_pumps/pump5.jpg" alt="Diesel Water Pump" />
+          <div class="product-content">
+            <h3>Diesel Water Pump</h3>
+            <p>Powerful and efficient water transfer pump for all conditions.</p>
+            <div class="cta-buttons">
+              <a href="https://wa.me/254722436270?text=Hello, I am interested in Diesel Water Pump" target="_blank">WhatsApp</a>
+              <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=Diesel%20Water%20Pump%20Enquiry">Email</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- GENERAL ACCESSORIES -->
+    <section class="category">
+  <h2>Generator Accessories</h2>
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="images/products/automatic_transfer_switches.jpg" alt="Automatic Transfer Switch" />
+      <div class="product-content">
+        <h3>Automatic Transfer Switch</h3>
+        <p>Seamlessly switch between power sources during outages.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/254722436270?text=I'm interested in Automatic Transfer Switch" target="_blank">WhatsApp</a>
+          <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=Automatic%20Transfer%20Switch%20Enquiry">Email</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="images/products/automatic_transfer_switches1.jpg" alt="ATS Unit" />
+      <div class="product-content">
+        <h3>ATS Unit</h3>
+        <p>Compact automatic transfer switch for small to mid-size generators.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/254722436270?text=I'm interested in ATS Unit" target="_blank">WhatsApp</a>
+          <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=ATS%20Unit%20Enquiry">Email</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="images/products/delta-starter.jpg" alt="Delta Starter" />
+      <div class="product-content">
+        <h3>Delta Starter</h3>
+        <p>Reduces motor startup current — ideal for larger generators.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/254722436270?text=I'm interested in Delta Starter" target="_blank">WhatsApp</a>
+          <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=Delta%20Starter%20Enquiry">Email</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="images/products/direct on line.jpg" alt="Direct On Line Starter" />
+      <div class="product-content">
+        <h3>Direct On Line Starter</h3>
+        <p>Simple and robust starter for small to medium generators.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/254722436270?text=I'm interested in Direct On Line Starter" target="_blank">WhatsApp</a>
+          <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=Direct%20On%20Line%20Starter%20Enquiry">Email</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="images/products/power_wizard.jpg" alt="Power Wizard Controller" />
+      <div class="product-content">
+        <h3>Power Wizard Controller</h3>
+        <p>Smart monitoring and management for generator performance.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/254722436270?text=I'm interested in Power Wizard Controller" target="_blank">WhatsApp</a>
+          <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=Power%20Wizard%20Enquiry">Email</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="images/products/star delta starter.jpg" alt="Star Delta Starter" />
+      <div class="product-content">
+        <h3>Star Delta Starter</h3>
+        <p>Efficient motor control for large equipment and generators.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/254722436270?text=I'm interested in Star Delta Starter" target="_blank">WhatsApp</a>
+          <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=Star%20Delta%20Starter%20Enquiry">Email</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="images/products/star delta-starter.jpg" alt="Star Delta Panel" />
+      <div class="product-content">
+        <h3>Star Delta Panel</h3>
+        <p>Pre-wired panels for motor start applications and safe switching.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/254722436270?text=I'm interested in Star Delta Panel" target="_blank">WhatsApp</a>
+          <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=Star%20Delta%20Panel%20Enquiry">Email</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="images/products/Vdo Oil pressure sensor.jpg" alt="VDO Oil Pressure Sensor" />
+      <div class="product-content">
+        <h3>VDO Oil Pressure Sensor</h3>
+        <p>Monitor engine oil pressure with high accuracy and reliability.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/254722436270?text=I'm interested in VDO Oil Pressure Sensor" target="_blank">WhatsApp</a>
+          <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=VDO%20Oil%20Pressure%20Sensor%20Enquiry">Email</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="images/products/vdo temperature sensor.jpg" alt="VDO Temperature Sensor" />
+      <div class="product-content">
+        <h3>VDO Temperature Sensor</h3>
+        <p>Ensure safe operation with dependable temperature readings.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/254722436270?text=I'm interested in VDO Temperature Sensor" target="_blank">WhatsApp</a>
+          <a href="mailto:steverobertsgeneratorsltd@gmail.com?subject=VDO%20Temperature%20Sensor%20Enquiry">Email</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Steve and Robert Generators Services Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/js/script.js"></script>
 </body>
 </html>

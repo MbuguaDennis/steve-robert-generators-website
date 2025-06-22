@@ -1,4 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+// Website logo functionality
+// When the website logo is clicked, redirect to index.html
+const websiteHomeLogo = document.getElementById("website-logo");
+
+if (websiteHomeLogo) {
+  websiteHomeLogo.style.cursor = "pointer"; // Always show pointer on hover
+  websiteHomeLogo.addEventListener("click", () => {
+    window.location.href = "index.html"; // Redirect to index.html
+  });
+}
+
+
+
+
+
+
+
+
+
+
   // Mobile Menu Toggle
   const mobileMenuBtn = document.querySelector(".mobile-menu-btn")
   const navMenu = document.querySelector(".nav-menu")
