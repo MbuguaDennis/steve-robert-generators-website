@@ -297,16 +297,19 @@ if (websiteHomeLogo) {
 })
 
 // back to top button functionality
- const backToTopBtn = document.getElementById('back-to-top');
+ // Show/hide the button on scroll
+window.addEventListener("scroll", () => {
+  const btn = document.getElementById("backToTop");
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+});
 
-  // Show/hide button on scroll
-  window.addEventListener('scroll', () => {
-    backToTopBtn.style.display = window.scrollY > 300 ? 'flex' : 'none';
-  });
-
-  // Smooth scroll to top on click
-  backToTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+// Scroll smoothly to top on click
+document.getElementById("backToTop").addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
 

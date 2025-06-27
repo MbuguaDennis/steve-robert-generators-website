@@ -1,3 +1,25 @@
+/* === Start: Company Profile Video Styling === */
+.company-profile-video {
+  padding: 4rem 1rem;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.company-profile-video .section-title {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 1.5rem;
+}
+
+.responsive-video {
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+/* === End: Company Profile Video Styling === */
+
 .top-bar {
   background-color: #003366;
   color: white;
