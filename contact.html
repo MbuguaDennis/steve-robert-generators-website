@@ -128,41 +128,47 @@
                     
                     <div class="contact-form">
                         <h2>Send Us a Message</h2>
-                        <form id="contact-form">
-                            <div class="form-group">
-                                <label for="name">Your Name <span class="required">*</span></label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="phone">Phone Number <span class="required">*</span></label>
-                                <input type="tel" id="phone" name="phone" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="service">Service Needed <span class="required">*</span></label>
-                                <select id="service" name="service" required>
-                                    <option value="">Select a service</option>
-                                    <option value="repair">Generator Repair</option>
-                                    <option value="servicing">Generator Servicing</option>
-                                    <option value="parts">Spare Parts & Accessories</option>
-                                    <option value="installation">Installation & Testing</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message">Your Message <span class="required">*</span></label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
-                            </div>
-                            
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                        </form>
+                      <form id="contact-form" action="https://formspree.io/f/mnqkprqy" method="POST">
+    <div class="form-group">
+        <label for="name">Your Name <span class="required">*</span></label>
+        <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="phone">Phone Number <span class="required">*</span></label>
+        <input type="tel" id="phone" name="phone" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email">
+    </div>
+
+    <div class="form-group">
+        <label for="service">Service Needed <span class="required">*</span></label>
+        <select id="service" name="service" required>
+            <option value="">Select a service</option>
+            <option value="repair">Generator Repair</option>
+            <option value="servicing">Generator Servicing</option>
+            <option value="parts">Spare Parts & Accessories</option>
+            <option value="installation">Installation & Testing</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="message">Your Message <span class="required">*</span></label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+
+    <!-- Hidden inputs for Formspree -->
+    <input type="hidden" name="_subject" value="New Inquiry from Website">
+    <input type="hidden" name="_redirect" value="https://steveandrobertgenerators/thank-you.html">
+    <input type="text" name="_gotcha" style="display:none">
+
+    <button type="submit" class="btn btn-primary">Send Message</button>
+</form>
+
                     </div>
                 </div>
             </div>
