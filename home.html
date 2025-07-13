@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steve and Roberts Generator Services - Your Sustainable Power Solution</title>
+    <meta name="description" content="Premium generator parts and components. Your sustainable power solution for all generator brands and models. Quality parts, expert service.">
+    <style>
+        /* ===== GLOBAL STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Container for consistent max-width and centering */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== HEADER STYLES ===== */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed; /* Fixed header for better UX */
+            width: 100%;
+            top: 0;
+            z-index: 1000; /* Ensure header stays on top */
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        /* Company logo styling */
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #27ae60; /* Green color for sustainability theme */
+        }
+
+        /* Navigation links container */
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        /* Individual navigation link styling */
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #27ae60; /* Green hover effect */
+        }
+
+        /* Mobile hamburger menu (hidden on desktop) */
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: #333;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* ===== HERO SECTION STYLES ===== */
+        .hero {
+            /* Gradient background for visual appeal */
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            padding: 120px 0 80px; /* Extra top padding for fixed header */
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease; /* Entrance animation */
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.2s both; /* Delayed animation */
+        }
+
+        /* Call-to-action button styling */
+        .cta-button {
+            display: inline-block;
+            background: #e67e22; /* Orange for contrast */
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .cta-button:hover {
+            background: #d35400;
+            transform: translateY(-2px); /* Subtle lift effect */
+        }
+
+        /* ===== SERVICES SECTION STYLES ===== */
+        .services {
+            padding: 80px 0;
+            background: #f8f9fa; /* Light background for contrast */
+        }
+
+        /* Section title styling used across multiple sections */
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        /* Grid layout for service cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* Individual service card styling */
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px); /* Hover lift effect */
+        }
+
+        /* Service icon styling */
+        .service-icon {
+            font-size: 3rem;
+            color: #27ae60;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        /* ===== ABOUT SECTION STYLES ===== */
+        .about {
+            padding: 80px 0;
+        }
+
+        /* Two-column layout for about content */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+
+        /* Statistics grid layout */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        /* Individual statistic styling */
+        .stat {
+            text-align: center;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #27ae60;
+        }
+
+        /* ===== CONTACT SECTION STYLES ===== */
+        .contact {
+            padding: 80px 0;
+            background: #2c3e50; /* Dark background for contrast */
+            color: white;
+        }
+
+        /* Two-column layout for contact content */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        /* Contact form container */
+        .contact-form {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        /* Form group styling for consistent spacing */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        /* Input and textarea styling */
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical; /* Allow vertical resizing only */
+        }
+
+        /* Submit button styling */
+        .submit-btn {
+            background: #27ae60;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: #219a52;
+        }
+
+        /* Contact information styling */
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item i {
+            font-size: 1.2rem;
+            margin-right: 1rem;
+            color: #27ae60;
+        }
+
+        /* ===== FOOTER STYLES ===== */
+        footer {
+            background: #1a252f;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        /* Fade in up animation for entrance effects */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Classes for scroll-triggered animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 768px) {
+            /* Mobile navigation styles */
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            /* Responsive hero text */
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            /* Single column layouts on mobile */
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== HEADER SECTION ===== -->
+    <header>
+        <nav class="container">
+            <!-- Company logo/name -->
+            <div class="logo">Steve & Roberts Generator Services</div>
+            
+            <!-- Desktop navigation menu -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="#parts">Parts</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <!-- Mobile hamburger menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Your Sustainable Power Solution</h1>
+            <p>Premium generator parts and components for all major brands. Quality parts, expert knowledge, sustainable solutions.</p>
+            <a href="#contact" class="cta-button">Browse Parts Catalog</a>
+        </div>
+    </section>
+
+    <!-- ===== PARTS CATEGORIES SECTION ===== -->
+    <section class="services" id="parts">
+        <div class="container">
+            <h2 class="section-title fade-in">Generator Parts Categories</h2>
+            <div class="services-grid">
+                <!-- Engine Components -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">🔧</div>
+                    <h3>Engine Components</h3>
+                    <p>Complete range of engine parts including pistons, cylinders, gaskets, filters, and cooling system components for all generator brands.</p>
+                </div>
+                
+                <!-- Electrical Parts -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">⚡</div>
+                    <h3>Electrical Components</h3>
+                    <p>Alternators, voltage regulators, control panels, wiring harnesses, and electrical accessories for reliable power generation.</p>
+                </div>
+                
+                <!-- Fuel System Parts -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">⛽</div>
+                    <h3>Fuel System Parts</h3>
+                    <p>Fuel pumps, injectors, carburetors, fuel lines, tanks, and filtration systems to keep your generator running efficiently.</p>
+                </div>
+                
+                <!-- Control Systems -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">🎛️</div>
+                    <h3>Control Systems</h3>
+                    <p>Advanced control modules, monitoring systems, automatic transfer switches, and remote monitoring equipment.</p>
+                </div>
+                
+                <!-- Maintenance Supplies -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">🛠️</div>
+                    <h3>Maintenance Supplies</h3>
+                    <p>Oil filters, air filters, spark plugs, belts, hoses, and all essential maintenance items to keep generators in peak condition.</p>
+                </div>
+                
+                <!-- Exhaust & Cooling -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">🌡️</div>
+                    <h3>Exhaust & Cooling</h3>
+                    <p>Exhaust systems, mufflers, radiators, cooling fans, thermostats, and heat exchangers for optimal temperature control.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <h2>Why Choose Steve & Roberts?</h2>
+                    <p>With decades of combined experience in the power generation industry, Steve and Roberts have built a reputation for providing high-quality generator parts and sustainable power solutions.</p>
+                    <p>We specialize in sourcing genuine and compatible parts for all major generator brands, ensuring your equipment operates at peak efficiency while minimizing environmental impact.</p>
+                    
+                    <!-- Company statistics -->
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-number">10,000+</div>
+                            <div>Parts in Stock</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">50+</div>
+                            <div>Generator Brands</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">24hr</div>
+                            <div>Fast Shipping</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">99%</div>
+                            <div>Customer Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image fade-in">
+                    <!-- Placeholder image for generator parts -->
+                    <img src="/images/Generator_WareHouse_Image.jpg" alt="Generator Parts Warehouse" style="width: 100%; border-radius: 10px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Get Your Parts Quote</h2>
+            <div class="contact-content">
+                <!-- Contact form -->
+                <div class="contact-form fade-in">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="generator">Generator Brand/Model</label>
+                            <input type="text" id="generator" name="generator" placeholder="e.g., Caterpillar 3406, Cummins 6BT">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Required</label>
+                            <select id="service" name="service">
+                                <option value="">Select service</option>
+                                <option value="generator-repair">Generator Repair</option>
+                                <option value="generator-servicing">Generator Servicing</option>
+                                <option value="spare-parts">Spare Parts and Accessories</option>
+                                <option value="installation-testing">Installation and Testing</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Service Details/Message</label>
+                            <textarea id="message" name="message" placeholder="Please describe your generator service needs, specific issues, or any questions..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Request Quote</button>
+                    </form>
+                </div>
+                
+                <!-- Contact information -->
+                <div class="contact-info fade-in">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <i>📍</i>
+                        <span>Travellers House, Room 16, Kirinyaga Road, Accra Lane<br>Nairobi City, Kenya<br>P.O. BOX 75984-00200 NRB</span>
+                    </div>
+                    <div class="contact-item">
+                        <i>📞</i>
+                        <span>Office Line 1: 0722 436 270</span>
+                    </div>
+                    <div class="contact-item">
+                        <i>📞</i>
+                        <span>Office Line 2: 0722 855 254</span>
+                    </div>
+                    <div class="contact-item">
+                        <i>📧</i>
+                        <span>steverobertsgeneratorsltd@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i>🚨</i>
+                        <span>Emergency Service: 24/7 Available</span>
+                    </div>
+                    <div class="contact-item">
+                        <i>⏰</i>
+                        <span>Monday - Friday: 8:00 AM - 6:00 PM</span>
+                    </div>
+                    <div class="contact-item">
+                        <i>📅</i>
+                        <span>Saturday: Available on Request</span>
+                    </div>
+                    <div class="contact-item">
+                        <i>☎️</i>
+                        <span>Sunday: Phone available for urgent needs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Steve & Roberts Generator Services. All rights reserved. | Your Sustainable Power Solution</p>
+        </div>
+    </footer>
+
+    <script>
+        // ===== MOBILE MENU FUNCTIONALITY =====
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navLinks = document.getElementById('navLinks');
+
+        // Toggle mobile menu when hamburger is clicked
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // ===== SMOOTH SCROLLING NAVIGATION =====
+        // Add smooth scrolling to all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    // Smooth scroll to target section
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // Close mobile menu after clicking a link
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // ===== SCROLL ANIMATIONS =====
+        // Options for intersection observer
+        const observerOptions = {
+            threshold: 0.1, // Trigger when 10% of element is visible
+            rootMargin: '0px 0px -50px 0px' // Trigger slightly before element enters viewport
+        };
+
+        // Create intersection observer for fade-in animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with fade-in class
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // ===== DYNAMIC HEADER BACKGROUND =====
+        // Change header background on scroll for better visibility
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = '#fff';
+                header.style.backdropFilter = 'none';
+            }
+        });
+
+        // ===== FORM SUBMISSION HANDLING =====
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent default form submission
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Get submit button for loading state
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            
+            // Show loading state
+            submitBtn.textContent = 'Sending Quote Request...';
+            submitBtn.disabled = true;
+            
+            // Simulate API call (replace with actual form submission)
+            setTimeout(() => {
+                alert('Thank you for your service request! We will get back to you within 4 hours to discuss your generator needs.');
+                this.reset(); // Clear form
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+
+        // ===== ENHANCED HOVER EFFECTS =====
+        // Add enhanced hover effects to service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+                this.style.boxShadow = '0 15px 30px rgba(0,0,0,0.15)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+                this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+            });
+        });
+
+        // ===== ANIMATED COUNTERS =====
+        // Function to animate number counters
+        function animateCounter(element, target, suffix = '') {
+            let current = 0;
+            const increment = target / 100; // Divide animation into 100 steps
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                // Update element text with formatted number
+                element.textContent = Math.floor(current).toLocaleString() + suffix;
+            }, 20); // Update every 20ms for smooth animation
+        }
+
+        // ===== STATS ANIMATION ON SCROLL =====
+        // Animate statistics when they come into view
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumbers = entry.target.querySelectorAll('.stat-number');
+                    // Define target values for each statistic
+                    const targets = [10000, 50, 24, 99];
+                    const suffixes = ['+', '+', 'hr', '%'];
+                    
+                    // Animate each counter with a slight delay
+                    statNumbers.forEach((stat, index) => {
+                        setTimeout(() => {
+                            animateCounter(stat, targets[index], suffixes[index]);
+                        }, index * 200); // 200ms delay between each counter
+                    });
+                    
+                    // Stop observing after animation starts
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        // Start observing the stats section
+        const statsSection = document.querySelector('.stats');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        // ===== ACCESSIBILITY ENHANCEMENTS =====
+        // Add keyboard navigation support for mobile menu
+        mobileMenu.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                navLinks.classList.toggle('active');
+            }
+        });
+
+        // Add focus management for better accessibility
+        document.addEventListener('keydown', function(e) {
+            // Close mobile menu on Escape key
+            if (e.key === 'Escape') {
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

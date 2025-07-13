@@ -1751,3 +1751,81 @@ footer {
   transform: translateY(-2px);
 }
 
+
+
+/* contact us section styling */
+.availability-text {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-left: 4px solid #007BFF; /* Brand color or any professional blue */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+.availability-text h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #007BFF;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.availability-text p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.availability-text p strong {
+  color: #d9534f; /* Emphasize with a warm color for urgency */
+  font-weight: 600;
+}
+
+
+
+.cta-home {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  border-top: 1px solid #dee2e6;
+}
+
+.cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.btn-home {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #007BFF;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-home:hover {
+  background-color: #0056b3;
+}
+
+
+
